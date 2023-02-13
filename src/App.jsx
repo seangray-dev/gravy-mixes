@@ -1,11 +1,12 @@
 import React from "react";
-import Hero from "./components/Hero";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 import PlaylistCarousel from "./components/PlaylistCarousel";
 import Portfolio from "./components/Portfolio";
-import QuoteForm from "./components/QuoteForm";
 import Testimonials from "./components/Testimonials";
+import About from "./components/About";
+import QuoteForm from "./components/QuoteForm";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <PlaylistCarousel></PlaylistCarousel>
       <Portfolio></Portfolio>
       <Testimonials></Testimonials>
+      <About></About>
       <QuoteForm></QuoteForm>
       <Footer></Footer>
     </div>
