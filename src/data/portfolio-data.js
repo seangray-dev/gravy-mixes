@@ -30,7 +30,7 @@ export default [
   {
     imgUrl: "/images/portfolio/didnt-i.jpeg",
     audioUrl: "",
-    title: "Lou Val - Dind't I",
+    title: "Lou Val - Didn't I",
     mixed: "Mixed by Sean Gray (Gravy Mixes)",
     mastered: "Mastered by Dion French",
   },
