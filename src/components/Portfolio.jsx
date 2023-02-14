@@ -4,7 +4,7 @@ import PortfolioItem from "./PortfolioItem";
 
 function Portfolio() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center">
+    <div className="flex flex-col md:flex-row items-center justify-center mb-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {portfolioData.map((item) => (
           <PortfolioItem
