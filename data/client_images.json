@@ -1,0 +1,16 @@
+{
+  "clientImages": [
+    {
+      "orange-lounge-logo": "/assets/images/clients/orange-lounge.png"
+    },
+    {
+      "soulection-logo": "/assets/images/clients/soulection.png"
+    },
+    {
+      "beatcave-logo": "/assets/images/clients/beatcave.jpeg"
+    },
+    {
+      "warner-music-logo": "/assets/images/clients/warner-music.jpeg"
+    }
+  ]
+}
