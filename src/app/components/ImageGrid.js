@@ -27,27 +27,28 @@ const ImageGrid = () => {
   );
 
   const [shuffledImages, setShuffledImages] = useState(
-    shuffleArray([...images]).slice(0, 12)
+    shuffleArray([...images]).slice(0, 9)
   );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setShuffledImages(shuffleArray([...images]).slice(0, 12));
+      setShuffledImages(shuffleArray([...images]).slice(0, 9));
     }, 5000); // Change every 5 seconds
 
     return () => clearInterval(interval);
   }, [images]);
 
   return (
-    <div className='grid grid-cols-4 grid-rows-3'>
+    <div className='grid grid-cols-3 grid-rows-3 h-full'>
       {shuffledImages.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`Image ${index}`}
-          aria-label='none'
-          className='w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all'
-        />
+        <div key={index} className='overflow-hidden'>
+          <img
+            src={image}
+            alt={`Image ${index}`}
+            aria-label='none'
+            className='w-full h-full object-cover opacity-80 hover:opacity-100 scale-[1.01] hover:scale-105 transition-all'
+          />
+        </div>
       ))}
     </div>
   );

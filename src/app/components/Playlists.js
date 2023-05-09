@@ -2,7 +2,7 @@ import ImageGrid from './ImageGrid';
 
 const Clients = () => {
   return (
-    <section className='flex flex-col-reverse md:grid md:grid-cols-[60%,_40%] lg:grid-cols-[40%,_60%]'>
+    <section className='flex flex-col md:grid md:grid-cols-[60%,_40%] lg:grid-cols-[40%,_60%]'>
       <div className='bg-white py-20 px-8 md:grid justify-center items-center'>
         <div className='grid gap-4 md:max-w-[387px]'>
           <h1 className='uppercase font-bold text-[2rem] md:text-4xl tracking-wider'>
