@@ -15,7 +15,7 @@ const PortfolioItem = ({
         alt={`${songName} by ${artistName}`}
       />
       <div className='text-white absolute bottom-0 flex flex-col gap-4 px-8 pb-2 w-full'>
-        <div className='pb-4 border-b-2'>
+        <div className='pb-4 border-b-2 border-b-white/25'>
           <p className='text-lg font-bold tracking-wider'>{songName}</p>
           <p className='text-sm'>By {artistName}</p>
         </div>
