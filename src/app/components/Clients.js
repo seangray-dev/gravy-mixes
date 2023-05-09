@@ -9,7 +9,7 @@ const Clients = () => {
       <div className='bg-white py-20 px-8 md:grid justify-center items-center'>
         <div className='grid gap-4 md:max-w-[387px]'>
           <h1 className='uppercase font-bold text-[2rem] md:text-4xl tracking-wider'>
-            Clients we've worked with
+            Brands we've worked with
           </h1>
           <p className='opacity-60 text-sm tracking-wide'>
             We take pride in our collaborations with renowned artists and brands
