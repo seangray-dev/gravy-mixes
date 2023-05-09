@@ -1,7 +1,5 @@
 import ClientImageSlider from './ClientImageSlider';
 
-import Btn_Primary from './buttons/Btn_Primary';
-
 const Clients = () => {
   return (
     <section className='flex flex-col-reverse md:grid md:grid-cols-[40%,_60%] lg:grid-cols-[60%,_40%]'>
@@ -19,7 +17,6 @@ const Clients = () => {
             and quality of our mixing services, and imagine the possibilities
             for your next project.
           </p>
-          <Btn_Primary>Listen</Btn_Primary>
         </div>
       </div>
     </section>
