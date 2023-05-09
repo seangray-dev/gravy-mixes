@@ -1,0 +1,40 @@
+{
+  "portfolioItems": [
+    {
+      "image": "/assets/images/portfolio/eastside.jpg",
+      "filePath": "/assets/audio/EASTSIDE.mp3",
+      "songName": "Eastside ft. Toosii",
+      "artistName": "Portion"
+    },
+    {
+      "image": "/assets/images/portfolio/eternal-sunshine.jpeg",
+      "filePath": "/assets/audio/ETERNAL_SUNSHINE.mp3",
+      "songName": "Eternal Sunshine",
+      "artistName": "Lou Val"
+    },
+    {
+      "image": "/assets/images/portfolio/blue.jpeg",
+      "filePath": "/assets/audio/BLUE.mp3",
+      "songName": "Blue",
+      "artistName": "Mikoh"
+    },
+    {
+      "image": "/assets/images/portfolio/wave.jpeg",
+      "filePath": "/assets/audio/WAVE.mp3",
+      "songName": "WAVE",
+      "artistName": "Portion"
+    },
+    {
+      "image": "/assets/images/portfolio/didnt-i.jpeg",
+      "filePath": "/assets/audio/DIDNT_I.mp3",
+      "songName": "Didn't I",
+      "artistName": "Lou Val"
+    },
+    {
+      "image": "/assets/images/portfolio/ickm.jpeg",
+      "filePath": "/assets/audio/KILL_ME.mp3",
+      "songName": "Madhouse",
+      "artistName": "It Could Kill Me"
+    }
+  ]
+}
