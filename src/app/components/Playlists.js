@@ -5,9 +5,9 @@ const Clients = () => {
     <section className='flex flex-col md:grid md:grid-cols-[60%,_40%] lg:grid-cols-[40%,_60%]'>
       <div className='bg-white py-20 px-8 md:grid justify-center items-center'>
         <div className='grid gap-4 md:max-w-[387px]'>
-          <h1 className='uppercase font-bold text-[2rem] md:text-4xl tracking-wider'>
+          <h2 className='uppercase font-bold text-[2rem] md:text-4xl tracking-wider'>
             Featured on curated Playlists
-          </h1>
+          </h2>
           <p className='opacity-60 text-sm tracking-wide'>
             Experience the exceptional quality of our mixing services that have
             captured the attention of prominent playlist curators, earning

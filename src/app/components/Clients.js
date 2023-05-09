@@ -8,9 +8,9 @@ const Clients = () => {
       </div>
       <div className='bg-white py-20 px-8 md:grid justify-center items-center'>
         <div className='grid gap-4 md:max-w-[387px]'>
-          <h1 className='uppercase font-bold text-[2rem] md:text-4xl tracking-wider'>
+          <h2 className='uppercase font-bold text-[2rem] md:text-4xl tracking-wider'>
             Brands we've worked with
-          </h1>
+          </h2>
           <p className='opacity-60 text-sm tracking-wide'>
             We take pride in our collaborations with renowned artists and brands
             in the audio industry. Explore pur portfolio showcasing the range
