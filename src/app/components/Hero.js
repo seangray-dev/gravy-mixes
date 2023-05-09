@@ -4,7 +4,7 @@ import Btn_Primary from './buttons/Btn_Primary';
 
 const Hero = () => {
   return (
-    <header className='flex flex-col-reverse md:grid md:grid-cols-[2fr,_1fr] lg:grid-cols-[1fr,_2fr]'>
+    <header className='flex flex-col-reverse md:grid md:grid-cols-[60%,_40%] lg:grid-cols-[40%,_60%]'>
       <section className='bg-black text-white py-20 px-8 md:grid justify-center items-center'>
         <div className='grid gap-4 md:max-w-[387px]'>
           <h1 className='uppercase font-bold text-[2rem] md:text-4xl tracking-wider'>
