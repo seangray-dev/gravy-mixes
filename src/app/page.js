@@ -5,6 +5,7 @@ import Clients from './components/Clients';
 import Playlists from './components/Playlists';
 import Testimonials from './components/Testimonials';
 import About from './components/About';
+import QuoteRequestForm from './components/QuoteRequestForm';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Playlists />
         <Testimonials />
         <About />
+        <QuoteRequestForm />
       </main>
     </>
   );
