@@ -8,7 +8,7 @@ const Nav = () => {
 
   return (
     <div className='bg-black'>
-      <nav className='bg-black text-white py-7 px-6 md:px-0 flex justify-between items-center relative z-50 contain'>
+      <nav className='bg-black text-white py-7 px-6 flex justify-between items-center relative z-50 contain'>
         <div className='w-20 relative z-20'>
           <img
             className='md:-ml-[19.5px]'

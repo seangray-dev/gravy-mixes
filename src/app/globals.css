@@ -14,15 +14,9 @@
   white-space: nowrap;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 2380px) {
   .contain {
     margin-inline: auto;
-    max-width: 690px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .contain {
-    max-width: 1110px;
+    max-width: 2380px;
   }
 }
