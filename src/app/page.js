@@ -6,6 +6,7 @@ import Playlists from './components/Playlists';
 import Testimonials from './components/Testimonials';
 import About from './components/About';
 import QuoteRequestForm from './components/QuoteRequestForm';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <About />
         <QuoteRequestForm />
       </main>
+      <Footer />
     </>
   );
 }
