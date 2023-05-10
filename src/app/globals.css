@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide labels but make them still accessible for screen readers */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -14,9 +15,25 @@
   white-space: nowrap;
 }
 
+/* Container for displaying on large screens */
 @media (min-width: 2380px) {
   .contain {
     margin-inline: auto;
     max-width: 2380px;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
