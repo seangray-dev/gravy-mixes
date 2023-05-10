@@ -53,9 +53,9 @@ const TestimonialSlider = () => {
             />
             <div className='flex flex-col gap-2 text-white text-sm tracking-wider pt-10 pb-20 px-8'>
               <h3 className='text-xl font-bold'>{testimonial.client}</h3>
-              <div className='flex gap-4 opacity-50'>
+              <div className='flex flex-col gap-1 lg:flex-row lg:gap-4 opacity-50'>
                 <p>{testimonial.aboutClient}</p>
-                <span>|</span>
+                <span className='hidden lg:block'>|</span>
                 <p>{testimonial.location}</p>
               </div>
               <p className='max-w-[500px]'>{testimonial.testimonial}</p>

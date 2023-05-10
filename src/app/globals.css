@@ -13,3 +13,16 @@
   border: 0;
   white-space: nowrap;
 }
+
+@media (min-width: 768px) {
+  .contain {
+    margin-inline: auto;
+    max-width: 690px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contain {
+    max-width: 1110px;
+  }
+}
