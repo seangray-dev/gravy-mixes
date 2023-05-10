@@ -2,7 +2,7 @@
 
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import Btn_Primary from './buttons/Btn_Primary';
+import Btn_Secondary from './buttons/Btn_Secondary';
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
@@ -20,9 +20,9 @@ const QuoteRequestForm = () => {
   };
 
   return (
-    <div className='bg-black text-white'>
-      <div className='max-w-[320px] md:max-w-[500px] mx-auto pt-10'>
-        <h3 className='uppercase font-bold text-[2rem] text-center md:text-4xl tracking-wider'>
+    <div className='bg-black text-white py-10'>
+      <div className='max-w-[320px] md:max-w-[500px] mx-auto'>
+        <h3 className='uppercase font-bold text-[2rem] text-center md:text-4xl tracking-wider mb-6'>
           Request a Quote
         </h3>
         <Formik
@@ -41,39 +41,53 @@ const QuoteRequestForm = () => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}>
           {({ setFieldValue }) => (
-            <Form className='flex flex-col'>
-              <label htmlFor='name' className='sr-only'>
-                Name
-              </label>
-              <Field
-                id='name'
-                name='name'
-                placeholder='Your Name or Artist Name'
-                className='bg-transparent border-b-2 border-white/60'
-              />
-              <ErrorMessage name='name'>
-                {(msg) => <div className='text-red-500'>{msg}</div>}
-              </ErrorMessage>
-              <label htmlFor='email' className='sr-only'>
-                Email
-              </label>
-              <Field
-                id='email'
-                name='email'
-                placeholder='john@doe.com'
-                type='email'
-              />
-              <ErrorMessage name='email'>
-                {(msg) => <div className='text-red-500'>{msg}</div>}
-              </ErrorMessage>
+            <Form className='flex flex-col gap-2'>
+              <div className='relative'>
+                <label htmlFor='name' className='sr-only'>
+                  Name
+                </label>
+                <Field
+                  id='name'
+                  name='name'
+                  placeholder='Your Name or Artist Name'
+                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
+                />
+                <ErrorMessage name='name'>
+                  {(msg) => (
+                    <div className='text-red-500 text-xs absolute top-0 right-0'>
+                      {msg}
+                    </div>
+                  )}
+                </ErrorMessage>
+              </div>
+              <div className='relative'>
+                <label htmlFor='email' className='sr-only'>
+                  Email
+                </label>
+                <Field
+                  id='email'
+                  name='email'
+                  placeholder='youremail@gmail.com'
+                  type='email'
+                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
+                />
+                <ErrorMessage name='email'>
+                  {(msg) => (
+                    <div className='text-red-500 text-xs absolute top-0 right-0'>
+                      {msg}
+                    </div>
+                  )}
+                </ErrorMessage>
+              </div>
               <label htmlFor='projectReason' className='sr-only'>
                 Why do you want to hire us for your next project?
               </label>
               <Field
                 id='projectReason'
                 name='projectReason'
-                placeholder='Describe your reason...'
+                placeholder='Why do you want to hire us for your next project?'
                 component='textarea'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
               />
               <label htmlFor='previousMusic' className='sr-only'>
                 Where can I stream your previous music?
@@ -81,83 +95,119 @@ const QuoteRequestForm = () => {
               <Field
                 id='previousMusic'
                 name='previousMusic'
-                placeholder='Enter a link...'
+                placeholder='Where can we stream your previous music? Enter a link...'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
               />
-              <label htmlFor='numberOfSongs' className='sr-only'>
-                Number of Songs
-              </label>
-              <Field as='select' name='numberOfSongs'>
-                <option value=''>Select</option>
-                {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
-                  <option key={num} value={num}>
-                    {num} {num === 1 ? 'song' : 'songs'}
-                  </option>
-                ))}
-                <option value='11+'>11+ songs</option>
-              </Field>
-              <ErrorMessage name='numberOfSongs'>
-                {(msg) => <div className='text-red-500'>{msg}</div>}
-              </ErrorMessage>
-              <div
-                id='servicesNeeded'
-                role='group'
-                aria-labelledby='servicesNeeded'>
-                <legend>Services Needed</legend>
-                <label>
-                  <Field
-                    type='checkbox'
-                    name='servicesNeeded'
-                    value='Mixing'
-                    as='input'
-                  />
-                  Mixing
+              <div className='relative'>
+                <label htmlFor='numberOfSongs' className='sr-only'>
+                  Number of Songs
                 </label>
-                <label>
-                  <Field
-                    type='checkbox'
-                    name='servicesNeeded'
-                    value='Mastering'
-                    as='input'
-                  />
-                  Mastering
-                </label>
-                <label>
-                  <Field
-                    type='checkbox'
-                    name='servicesNeeded'
-                    value='Pitch Correction'
-                    as='input'
-                  />
-                  Pitch Correction
-                </label>
+                <Field
+                  as='select'
+                  name='numberOfSongs'
+                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all text-white/60'>
+                  <option value='none'>Number of Songs</option>
+                  {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
+                    <option key={num} value={num}>
+                      {num} {num === 1 ? 'song' : 'songs'}
+                    </option>
+                  ))}
+                  <option value='11+'>11+ songs</option>
+                </Field>
+                <ErrorMessage name='numberOfSongs'>
+                  {(msg) => (
+                    <div className='text-red-500 text-xs absolute top-0 right-0'>
+                      {msg}
+                    </div>
+                  )}
+                </ErrorMessage>
               </div>
-              <ErrorMessage name='servicesNeeded'>
-                {(msg) => <div className='text-red-500'>{msg}</div>}
-              </ErrorMessage>
-              <label htmlFor='dueDate' className='sr-only'>
-                Final Mix Due Date
-              </label>
-              <Field id='dueDate' name='dueDate' type='date' />
-              <label htmlFor='budget' className='sr-only'>
-                Your Budget - Per Song
-              </label>
-              <Field as='select' name='budget'>
-                <option value=''>Select</option>
-                <option value='$250-$350'>$250-$350</option>
-                <option value='$350-$500'>$350-$500</option>
-                <option value='$500+'>$500+</option>
-              </Field>
-              <ErrorMessage name='budget'>
-                {(msg) => <div className='text-red-500'>{msg}</div>}
-              </ErrorMessage>
+              <div className='relative'>
+                <label htmlFor='budget' className='sr-only'>
+                  Your Budget - Per Song
+                </label>
+                <Field
+                  as='select'
+                  name='budget'
+                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white transition-all text-white/60 relative'>
+                  <option value=''>Your Budget - Per Song</option>
+                  <option value='$250-$350'>$250-$350</option>
+                  <option value='$350-$500'>$350-$500</option>
+                  <option value='$500+'>$500+</option>
+                </Field>
+                <ErrorMessage name='budget'>
+                  {(msg) => (
+                    <div className='text-red-500 text-xs absolute top-0 right-0'>
+                      {msg}
+                    </div>
+                  )}
+                </ErrorMessage>
+              </div>
+              <div className='relative'>
+                <div
+                  id='servicesNeeded'
+                  role='group'
+                  aria-labelledby='servicesNeeded'>
+                  <legend>
+                    Services Needed{' '}
+                    <span className='text-white/60 text-xs'>
+                      (Select one or more)
+                    </span>
+                  </legend>
+                  <div className='flex flex-wrap gap-4'>
+                    <label className='flex gap-2'>
+                      <Field
+                        type='checkbox'
+                        name='servicesNeeded'
+                        value='Mixing'
+                        as='input'
+                      />
+                      Mixing
+                    </label>
+                    <label className='flex gap-2'>
+                      <Field
+                        type='checkbox'
+                        name='servicesNeeded'
+                        value='Mastering'
+                        as='input'
+                      />
+                      Mastering
+                    </label>
+                    <label className='flex gap-2'>
+                      <Field
+                        type='checkbox'
+                        name='servicesNeeded'
+                        value='Pitch Correction'
+                        as='input'
+                      />
+                      Pitch Correction
+                    </label>
+                  </div>
+                </div>
+                <ErrorMessage name='servicesNeeded'>
+                  {(msg) => (
+                    <div className='text-red-500 text-xs absolute top-0 right-0'>
+                      {msg}
+                    </div>
+                  )}
+                </ErrorMessage>
+              </div>
+              <label htmlFor='dueDate'>Final Mix Due Date</label>
+              <Field
+                id='dueDate'
+                name='dueDate'
+                type='date'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white transition-all text-white/60'
+              />
               <label htmlFor='projectDetails' className='sr-only'>
                 Tell us a bit more about this project
               </label>
               <Field
                 id='projectDetails'
                 name='projectDetails'
-                placeholder='Describe your project...'
+                placeholder='Tell us a bit more about this project...'
                 component='textarea'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
               />
               <label htmlFor='roughMix' className='sr-only'>
                 Submit Rough Mix/Demo
@@ -167,8 +217,11 @@ const QuoteRequestForm = () => {
                 name='roughMix'
                 component='textarea'
                 placeholder='After submitting this form, you will receive an email in your inbox to upload your demo(s) for the project you would like mixed.'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
               />
-              <button type='submit'>Submit</button>
+              <div className='mx-auto mt-4 w-full'>
+                <Btn_Secondary>Submit</Btn_Secondary>
+              </div>
             </Form>
           )}
         </Formik>
