@@ -1,0 +1,39 @@
+{
+  "testimonials": [
+    {
+      "imgUrl": "/assets/images/testimonials/portion.jpeg",
+      "client": "Portion",
+      "aboutClient": "Artist",
+      "location": "Torotnto, Canada",
+      "testimonial": "Sean’s ear is on point for exactly what I like. His attention to detail is very important to my process of mixing records. Being more like a friend and a great person rather than an engineer that just presses buttons. The experience of working with Sean has been great. Having trust in Sean to mix my project was a no brainer after our first time meeting. If your'e looking for an engineer to keep it authentic with his criticism, and stay on point with sound and frequencies, Sean is your guy! Excited for the next chapter of where he takes it next."
+    },
+    {
+      "imgUrl": "/assets/images/testimonials/sunnyb.png",
+      "client": "Sunny B",
+      "aboutClient": "Artist",
+      "location": "Toronto, Canada",
+      "testimonial": "I’ve been working with Sean for over 2+ years and I’m extremely happy with his work ethic. His dedication, detail and professionalism in his craft showcases his passion for engineering. Besides our professional relationship; I always reach out to Sean for guidance and advise in building my own career. I’m honoured to work with Sean and I’d like to thank him for being a true friend in the musical industry."
+    },
+    {
+      "imgUrl": "/assets/images/testimonials/mikoh.jpeg",
+      "client": "Mikoh",
+      "aboutClient": "Artist",
+      "location": "Toronto, Canada",
+      "testimonial": "Sean is a very detail oriented engineer. He is always conscious about the integrity of the artist’s vision and delivers industry standard, quality mixes. I have had the pleasure of developing my sound with Sean and I would not have been able to progress as fast as I am without his help. Anyone who has the chance to work with him has the upper hand in an industry with such a strong competitive atmosphere. Sean pushes the boundaries by setting the bar high and committing to his own artistic process without cutting corners. If you’re an artist or label looking for someone on your team to help guide you to greater places, there is no one better for the job."
+    },
+    {
+      "imgUrl": "/assets/images/testimonials/anthony-jordan.JPG",
+      "client": "Anthony Jordan",
+      "aboutClient": "Producer / Engineer / Artist",
+      "location": "Toronto, Canada",
+      "testimonial": "Sean’s ear and skill on the technical aspects of a mix is sharply tuned. More importantly his ear for vibe, texture and direction of a track stands out. I consider him more than an engineer. His mixes are tasteful, musical and artistic. Beyond that, Sean is just a great person to work with and is always dedicated to creating something special."
+    },
+    {
+      "imgUrl": "/assets/images/testimonials/5PiECE.jpeg",
+      "client": "Dan Lombardi (5PiECE)",
+      "aboutClient": "Producer / Engineer",
+      "location": "Toronto, Canada",
+      "testimonial": "I’ve hired Sean a few times to handle some client mixes when my workload was too full. He came through and delivered every time in a professional and timely manner. I was very happy with the quality of his work, and so were my clients. I highly recommend his services.."
+    }
+  ]
+}

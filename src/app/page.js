@@ -3,6 +3,8 @@ import Hero from './components/Hero';
 import { Portfolio } from './components/Portfolio';
 import Clients from './components/Clients';
 import Playlists from './components/Playlists';
+import Testimonials from './components/Testimonials';
+import About from './components/About';
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <Portfolio />
         <Clients />
         <Playlists />
+        <Testimonials />
+        <About />
       </main>
     </>
   );
