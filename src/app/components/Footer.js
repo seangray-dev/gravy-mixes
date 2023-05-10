@@ -6,7 +6,7 @@ const Footer = () => {
       <div>
         <div className='w-[170px] md:w-32 mx-auto md:mx-0 mb-2'>
           <img
-            className='-ml-[29.5px]'
+            className='md:-ml-[29.5px]'
             src='/assets/images/branding/gravymixes-logo.png'
             alt=''
           />
