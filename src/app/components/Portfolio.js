@@ -1,7 +1,7 @@
 import PortfolioItem from './PortfolioItem';
 import portfolioData from '../../../data/portfolioItems.json';
 
-export const Portfolio = () => {
+const Portfolio = () => {
   return (
     <section className='overflow-x-scroll'>
       <ul className='flex flex-col md:flex-row md:whitespace-nowrap'>
@@ -20,3 +20,5 @@ export const Portfolio = () => {
     </section>
   );
 };
+
+export default Portfolio;

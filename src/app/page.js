@@ -1,6 +1,6 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
-import { Portfolio } from './components/Portfolio';
+import Portfolio from './components/Portfolio';
 import Clients from './components/Clients';
 import Playlists from './components/Playlists';
 import Testimonials from './components/Testimonials';
