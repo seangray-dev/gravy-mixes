@@ -11,13 +11,18 @@ const Nav = () => {
     <div className='bg-black'>
       <nav className='bg-black text-white py-7 px-6 flex justify-between items-center relative z-50 contain'>
         <div className='w-20 relative z-20'>
-          <img
-            className='md:-ml-[19.5px]'
-            src='/assets/images/branding/gravymixes-logo.png'
-            alt=''
-          />
+          <Link href={'/'}>
+            <img
+              className='md:-ml-[19.5px]'
+              src='/assets/images/branding/gravymixes-logo.png'
+              alt=''
+            />
+          </Link>
         </div>
         <div className='hidden md:flex gap-10 uppercase text-sm tracking-widest'>
+          <Link className='hover:opacity-60 transition-all' href='/'>
+            Home
+          </Link>
           <Link className='hover:opacity-60 transition-all' href='#listen'>
             Listen
           </Link>
