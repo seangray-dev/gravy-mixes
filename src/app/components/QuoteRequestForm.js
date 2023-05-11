@@ -227,7 +227,6 @@ const QuoteRequestForm = () => {
                 className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
               />
               <div className='mx-auto mt-4 w-full'>
-                {/* <Btn_Secondary href={''}>Submit</Btn_Secondary> */}
                 <button className='bg-white text-black py-2 px-6 w-full uppercase flex items-center gap-4 hover:opacity-60 duration-300 transition-all'>
                   <span className='mx-auto font-bold tracking-widest text-xs md:text-sm'>
                     Submit
