@@ -1,7 +1,20 @@
+'use client';
+
+import { useState } from 'react';
 import PortfolioItem from './PortfolioItem';
 import portfolioData from '../../../data/portfolioItems.json';
 
 const Portfolio = () => {
+  const [currentPlaying, setCurrentPlaying] = useState(null);
+
+  const playTrack = (filePath) => {
+    if (currentPlaying === filePath) {
+      setCurrentPlaying(null); // if the track is already playing, set currentPlaying to null
+    } else {
+      setCurrentPlaying(filePath); // if the track is not playing, start it
+    }
+  };
+
   return (
     <section className='bg-black'>
       <div className='overflow-x-scroll contain'>
@@ -9,11 +22,12 @@ const Portfolio = () => {
           {portfolioData.portfolioItems.map((item, index) => (
             <li key={index} className='md:min-w-[33.333%]'>
               <PortfolioItem
-                trackTitle={item.trackTitle}
                 image={item.image}
                 filePath={item.filePath}
                 songName={item.songName}
                 artistName={item.artistName}
+                playTrack={playTrack}
+                isPlaying={currentPlaying === item.filePath}
               />
             </li>
           ))}
