@@ -36,7 +36,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className='text-white/60 mx-auto md:mx-0 self-end md:text-right'>
-          Copyright 2023. All Rights Reserved
+          <p>© {new Date().getFullYear()} Gravy Mixes. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
