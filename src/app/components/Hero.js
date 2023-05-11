@@ -19,11 +19,13 @@ const Hero = () => {
           </div>
         </section>
         <section className='object-cover w-100 bg-black'>
-          <Image
-            className='md:h-full md:max-h-[1000px] md:w-full md:max-w-full object-cover opacity-80 hover:opacity-100 transition-all'
-            src={bg_hero}
-            alt='sean gray working on an ssl console'
-          />
+          <div className='overflow-hidden'>
+            <Image
+              className='md:h-full md:max-h-[1000px] md:w-full md:max-w-full object-cover opacity-80 hover:opacity-100 transition-all duration-500 hover:scale-105'
+              src={bg_hero}
+              alt='sean gray working on an ssl console'
+            />
+          </div>
         </section>
       </header>
     </div>
