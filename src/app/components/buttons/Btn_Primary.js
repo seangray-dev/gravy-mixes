@@ -1,8 +1,12 @@
-const Btn_Primary = ({ children }) => {
+import Link from 'next/link';
+
+const Btn_Primary = ({ children, href }) => {
   return (
-    <button className='uppercase flex items-center gap-4 max-w-[200px] hover:opacity-60 transition-all'>
-      <div className='font-bold tracking-widest text-xs'>{children}</div>
-    </button>
+    <Link href={href}>
+      <div className='uppercase flex items-center gap-4 max-w-[200px] hover:opacity-60 transition-all'>
+        <span className='font-bold tracking-widest text-xs'>{children}</span>
+      </div>
+    </Link>
   );
 };
 

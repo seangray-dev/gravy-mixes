@@ -20,7 +20,7 @@ const QuoteRequestForm = () => {
   };
 
   return (
-    <div className='bg-black text-white py-10'>
+    <div id='quote' className='bg-black text-white py-10'>
       <div className='max-w-[320px] md:max-w-[500px] mx-auto'>
         <h3 className='uppercase font-bold text-[2rem] text-center md:text-4xl tracking-wider mb-6'>
           Request a Quote
@@ -220,7 +220,7 @@ const QuoteRequestForm = () => {
                 className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
               />
               <div className='mx-auto mt-4 w-full'>
-                <Btn_Secondary>Submit</Btn_Secondary>
+                <Btn_Secondary href={'#quote'}>Submit</Btn_Secondary>
               </div>
             </Form>
           )}

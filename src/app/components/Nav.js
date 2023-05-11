@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import Btn_Secondary from './buttons/Btn_Secondary';
 
@@ -17,18 +18,18 @@ const Nav = () => {
           />
         </div>
         <div className='hidden md:flex gap-10 uppercase text-sm tracking-widest'>
-          <a className='hover:opacity-60 transition-all' href=''>
+          <Link className='hover:opacity-60 transition-all' href='#listen'>
             Listen
-          </a>
-          <a className='hover:opacity-60 transition-all' href=''>
+          </Link>
+          <Link className='hover:opacity-60 transition-all' href='#about'>
             About
-          </a>
-          <a className='hover:opacity-60 transition-all' href=''>
+          </Link>
+          <Link className='hover:opacity-60 transition-all' href='#quote'>
             Contact
-          </a>
+          </Link>
         </div>
         <div className='hidden md:block w-[158px]'>
-          <Btn_Secondary>Get a Quote</Btn_Secondary>
+          <Btn_Secondary href={'#quote'}>Get a Quote</Btn_Secondary>
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -49,23 +50,23 @@ const Nav = () => {
         }>
         <ul className='w-[310px] mx-auto flex flex-col text-center md:text-left gap-5 md:gap-10 uppercase text-sm tracking-widest border-b-2 border-white/60 pb-5'>
           <li>
-            <a className='hover:opacity-60 transition-all' href=''>
+            <Link className='hover:opacity-60 transition-all' href=''>
               Listen
-            </a>
+            </Link>
           </li>
           <li>
-            <a className='hover:opacity-60 transition-all' href=''>
+            <Link className='hover:opacity-60 transition-all' href=''>
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a className='hover:opacity-60 transition-all' href=''>
+            <Link className='hover:opacity-60 transition-all' href=''>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
         <div className='w-[310px] mx-auto py-8'>
-          <Btn_Secondary>Get a Quote</Btn_Secondary>
+          <Btn_Secondary href={'#quote'}>Get a Quote</Btn_Secondary>
         </div>
       </div>
     </div>

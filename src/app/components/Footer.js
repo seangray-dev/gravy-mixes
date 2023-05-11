@@ -1,4 +1,4 @@
-import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -14,24 +14,19 @@ const Footer = () => {
           </div>
           <ul className='flex flex-col md:flex-row gap-5 mx-auto md:mx-0 text-center uppercase text-sm tracking-widest md:pb-20'>
             <li>
-              <a className='hover:opacity-60 transition-all' href=''>
+              <Link className='hover:opacity-60 transition-all' href='#listen'>
                 Listen
-              </a>
+              </Link>
             </li>
             <li>
-              <a className='hover:opacity-60 transition-all' href=''>
+              <Link className='hover:opacity-60 transition-all' href='#about'>
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a className='hover:opacity-60 transition-all' href=''>
+              <Link className='hover:opacity-60 transition-all' href='#quote'>
                 Contact
-              </a>
-            </li>
-            <li>
-              <a className='hover:opacity-60 transition-all' href=''>
-                FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

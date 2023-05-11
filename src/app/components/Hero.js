@@ -15,7 +15,7 @@ const Hero = () => {
               Dedicated to elevating your sonic landscape by crafting immersive
               and engaging audio experiences.
             </p>
-            <Btn_Primary>Get a quote</Btn_Primary>
+            <Btn_Primary href={'#quote'}>Get a quote</Btn_Primary>
           </div>
         </section>
         <section className='object-cover w-100 bg-black'>
