@@ -3,6 +3,8 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
@@ -48,7 +50,7 @@ const QuoteRequestForm = () => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}>
           {({ setFieldValue }) => (
-            <Form className='flex flex-col gap-2'>
+            <Form className='flex flex-col gap-4 '>
               <div className='relative'>
                 <label htmlFor='name' className='sr-only'>
                   Name
@@ -57,7 +59,7 @@ const QuoteRequestForm = () => {
                   id='name'
                   name='name'
                   placeholder='Your Name or Artist Name'
-                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
+                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 focus:border-white transition-all placeholder:text-white/50'
                 />
                 <ErrorMessage name='name'>
                   {(msg) => (
@@ -76,7 +78,7 @@ const QuoteRequestForm = () => {
                   name='email'
                   placeholder='youremail@gmail.com'
                   type='email'
-                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
+                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 focus:border-white transition-all placeholder:text-white/50'
                 />
                 <ErrorMessage name='email'>
                   {(msg) => (
@@ -94,7 +96,7 @@ const QuoteRequestForm = () => {
                 name='projectReason'
                 placeholder='Why do you want to hire us for your next project?'
                 component='textarea'
-                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 focus:border-white transition-all placeholder:text-white/50'
               />
               <label htmlFor='previousMusic' className='sr-only'>
                 Where can I stream your previous music?
@@ -103,7 +105,7 @@ const QuoteRequestForm = () => {
                 id='previousMusic'
                 name='previousMusic'
                 placeholder='Where can we stream your previous music? Enter a link...'
-                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 focus:border-white transition-all placeholder:text-white/50'
               />
               <div className='relative'>
                 <label htmlFor='numberOfSongs' className='sr-only'>
@@ -112,7 +114,7 @@ const QuoteRequestForm = () => {
                 <Field
                   as='select'
                   name='numberOfSongs'
-                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all text-white/60'>
+                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 focus:border-white transition-all text-white/50'>
                   <option value='none'>Number of Songs</option>
                   {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
                     <option key={num} value={num}>
@@ -136,7 +138,7 @@ const QuoteRequestForm = () => {
                 <Field
                   as='select'
                   name='budget'
-                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white transition-all text-white/60 relative'>
+                  className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 transition-all text-white/50 relative'>
                   <option value=''>Your Budget - Per Song</option>
                   <option value='$250-$350'>$250-$350</option>
                   <option value='$350-$500'>$350-$500</option>
@@ -155,13 +157,13 @@ const QuoteRequestForm = () => {
                   id='servicesNeeded'
                   role='group'
                   aria-labelledby='servicesNeeded'>
-                  <legend>
+                  <legend className='my-2'>
                     Services Needed{' '}
-                    <span className='text-white/60 text-xs'>
+                    <span className='text-white/50 text-xs'>
                       (Select one or more)
                     </span>
                   </legend>
-                  <div className='flex flex-wrap gap-4'>
+                  <div className='flex flex-wrap justify-between'>
                     <label className='flex gap-2'>
                       <Field
                         type='checkbox'
@@ -199,13 +201,23 @@ const QuoteRequestForm = () => {
                   )}
                 </ErrorMessage>
               </div>
-              <label htmlFor='dueDate'>Final Mix Due Date</label>
-              <Field
-                id='dueDate'
-                name='dueDate'
-                type='date'
-                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white transition-all text-white/60'
-              />
+              <div className='relative flex flex-col'>
+                <label htmlFor='dueDate'>Final Mix Due Date</label>
+                <label htmlFor='dueDate'>
+                  <FontAwesomeIcon
+                    icon={faCalendarDays}
+                    style={{ color: '#ffffff' }}
+                    alt={'calendar-icon'}
+                    className='absolute right-2 top-[50%] pointer-events-none'
+                  />
+                </label>
+                <Field
+                  id='dueDate'
+                  name='dueDate'
+                  type='date'
+                  className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 transition-all text-white/50'
+                />
+              </div>
               <label htmlFor='projectDetails' className='sr-only'>
                 Tell us a bit more about this project
               </label>
@@ -214,7 +226,7 @@ const QuoteRequestForm = () => {
                 name='projectDetails'
                 placeholder='Tell us a bit more about this project...'
                 component='textarea'
-                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 focus:border-white transition-all placeholder:text-white/50'
               />
               <label htmlFor='roughMix' className='sr-only'>
                 Submit Rough Mix/Demo
@@ -224,7 +236,7 @@ const QuoteRequestForm = () => {
                 name='roughMix'
                 component='textarea'
                 placeholder='After submitting this form, you will receive an email in your inbox to upload your demo(s) for the project you would like mixed.'
-                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
+                className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 focus:border-white transition-all placeholder:text-white/50'
               />
               <div className='mx-auto mt-4 w-full'>
                 <button className='bg-white text-black py-2 px-6 w-full uppercase flex items-center gap-4 hover:opacity-60 duration-300 transition-all'>
