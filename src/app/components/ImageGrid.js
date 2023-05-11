@@ -24,44 +24,29 @@ const ImageGrid = () => {
     (item) => Object.values(item)[0]
   );
 
-  const [shuffledImages, setShuffledImages] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return shuffleArray([...images]).slice(
-        0,
-        window.innerWidth >= 1440 ? 16 : 9
-      );
-    } else {
-      return [];
-    }
-  });
+  const [shuffledImages, setShuffledImages] = useState(
+    shuffleArray([...images]).slice(0, window.innerWidth >= 1440 ? 16 : 9)
+  );
 
   useEffect(() => {
     const handleResize = () => {
-      if (typeof window !== 'undefined') {
-        setShuffledImages(
-          shuffleArray([...images]).slice(0, window.innerWidth >= 1440 ? 16 : 9)
-        );
-      }
+      setShuffledImages(
+        shuffleArray([...images]).slice(0, window.innerWidth >= 1440 ? 16 : 9)
+      );
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', handleResize);
-    }
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('resize', handleResize);
-      }
+      window.removeEventListener('resize', handleResize);
     };
   }, [images]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (typeof window !== 'undefined') {
-        setShuffledImages(
-          shuffleArray([...images]).slice(0, window.innerWidth >= 1440 ? 16 : 9)
-        );
-      }
+      setShuffledImages(
+        shuffleArray([...images]).slice(0, window.innerWidth >= 1440 ? 16 : 9)
+      );
     }, 3000);
 
     return () => clearInterval(interval);
