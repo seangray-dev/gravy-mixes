@@ -2,7 +2,7 @@
 
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import Btn_Secondary from './buttons/Btn_Secondary';
+import axios from 'axios';
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
@@ -13,9 +13,16 @@ const validationSchema = Yup.object({
 });
 
 const QuoteRequestForm = () => {
-  const handleSubmit = (values, actions) => {
-    // Send the data to Make.com
-    console.log(values);
+  const handleSubmit = async (values, actions) => {
+    try {
+      const response = await axios.post(
+        process.env.NEXT_PUBLIC_MAKE_QUOTE_REQUEST_HOOK,
+        values
+      );
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
     actions.setSubmitting(false);
   };
 
@@ -220,7 +227,12 @@ const QuoteRequestForm = () => {
                 className='bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 hover:border-white focus:border-white transition-all'
               />
               <div className='mx-auto mt-4 w-full'>
-                <Btn_Secondary href={'#quote'}>Submit</Btn_Secondary>
+                {/* <Btn_Secondary href={''}>Submit</Btn_Secondary> */}
+                <button className='bg-white text-black py-2 px-6 w-full uppercase flex items-center gap-4 hover:opacity-60 duration-300 transition-all'>
+                  <span className='mx-auto font-bold tracking-widest text-xs md:text-sm'>
+                    Submit
+                  </span>
+                </button>
               </div>
             </Form>
           )}
