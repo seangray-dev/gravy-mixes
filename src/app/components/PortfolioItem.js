@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPauseCircle,
   faPlayCircle,
-  faVolumeHigh,
 } from '@fortawesome/free-solid-svg-icons';
 
 const PortfolioItem = ({
@@ -101,16 +100,16 @@ const PortfolioItem = ({
           </div>
         </div>
         <div className='flex justify-between gap-4 items-center'>
-          <p className='text-s w-[20px]'>{formatTime(playbackTime)}</p>
+          <p className='text-s font-bold'>{formatTime(playbackTime)}</p>
           <input
             type='range'
             min='0'
             max={duration}
             value={playbackTime}
             onChange={handleTimeChange}
-            className='w-[300px]'
+            className='custom-range'
           />
-          <p className='text-s w-[20px]'>{formatTime(duration)}</p>
+          <p className='text-s w-[20px] font-bold'>{formatTime(duration)}</p>
         </div>
         <audio
           ref={audioRef}

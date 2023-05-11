@@ -37,3 +37,34 @@
     opacity: 1;
   }
 }
+
+.custom-range {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  height: 15px;
+  width: 90%;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  outline: none;
+  -webkit-transition: 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.custom-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
