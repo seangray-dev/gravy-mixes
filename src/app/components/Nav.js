@@ -19,20 +19,28 @@ const Nav = () => {
             />
           </Link>
         </div>
-        <div className='hidden md:flex gap-10 uppercase text-sm tracking-widest'>
-          <Link className='hover:opacity-60 transition-all' href='/'>
-            Home
-          </Link>
-          <Link className='hover:opacity-60 transition-all' href='#listen'>
-            Listen
-          </Link>
-          <Link className='hover:opacity-60 transition-all' href='#about'>
-            About
-          </Link>
-          <Link className='hover:opacity-60 transition-all' href='#quote'>
-            Contact
-          </Link>
-        </div>
+        <ul className='hidden md:flex gap-10 uppercase text-sm tracking-widest'>
+          <li>
+            <Link className='hover:opacity-60 transition-all' href='/'>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className='hover:opacity-60 transition-all' href='#listen'>
+              Listen
+            </Link>
+          </li>
+          <li>
+            <Link className='hover:opacity-60 transition-all' href='#about'>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link className='hover:opacity-60 transition-all' href='#quote'>
+              Contact
+            </Link>
+          </li>
+        </ul>
         <div className='hidden md:block w-[158px]'>
           <Btn_Secondary href={'#quote'}>Get a Quote</Btn_Secondary>
         </div>
@@ -55,17 +63,22 @@ const Nav = () => {
         }>
         <ul className='w-[310px] mx-auto flex flex-col text-center md:text-left gap-5 md:gap-10 uppercase text-sm tracking-widest border-b-2 border-white/60 pb-5'>
           <li>
-            <Link className='hover:opacity-60 transition-all' href=''>
+            <Link className='hover:opacity-60 transition-all' href='/'>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className='hover:opacity-60 transition-all' href='#listen'>
               Listen
             </Link>
           </li>
           <li>
-            <Link className='hover:opacity-60 transition-all' href=''>
+            <Link className='hover:opacity-60 transition-all' href='#about'>
               About
             </Link>
           </li>
           <li>
-            <Link className='hover:opacity-60 transition-all' href=''>
+            <Link className='hover:opacity-60 transition-all' href='#quote'>
               Contact
             </Link>
           </li>
