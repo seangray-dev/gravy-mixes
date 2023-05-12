@@ -1,10 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faPauseCircle,
-  faPlayCircle,
-} from '@fortawesome/free-solid-svg-icons';
+import { faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 const PortfolioItem = ({
   image,
@@ -71,7 +68,7 @@ const PortfolioItem = ({
   return (
     <div className='bg-black relative'>
       <img
-        className='w-full object-cover aspect-square opacity-70'
+        className='w-full max-h-40 md:max-h-full object-cover aspect-square opacity-70'
         src={image}
         alt={`${songName} by ${artistName}`}
       />
@@ -100,16 +97,18 @@ const PortfolioItem = ({
           </div>
         </div>
         <div className='flex justify-between gap-4 items-center'>
-          <p className='text-s font-bold'>{formatTime(playbackTime)}</p>
+          <p className='text-s font-bold min-w-[3ch] '>
+            {formatTime(playbackTime)}
+          </p>
           <input
             type='range'
             min='0'
             max={duration}
             value={playbackTime}
             onChange={handleTimeChange}
-            className='custom-range'
+            className='audio-length'
           />
-          <p className='text-s w-[20px] font-bold'>{formatTime(duration)}</p>
+          <p className='text-s font-bold'>{formatTime(duration)}</p>
         </div>
         <audio
           ref={audioRef}

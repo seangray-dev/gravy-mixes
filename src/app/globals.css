@@ -38,8 +38,8 @@
   }
 }
 
-.custom-range {
-  -webkit-appearance: none; /* Override default CSS styles */
+.audio-length {
+  -webkit-appearance: none;
   appearance: none;
   height: 15px;
   width: 90%;
@@ -47,11 +47,9 @@
   cursor: pointer;
   background: rgba(255, 255, 255, 0.5);
   outline: none;
-  -webkit-transition: 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 
-.custom-range::-webkit-slider-thumb {
+.audio-length::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -61,10 +59,18 @@
   cursor: pointer;
 }
 
-.custom-range::-moz-range-thumb {
+.audio-length::-moz-range-thumb {
   width: 20px;
   height: 20px;
   background: white;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
 }

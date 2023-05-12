@@ -17,10 +17,10 @@ const Portfolio = () => {
 
   return (
     <section id='listen' className='bg-black'>
-      <div className='overflow-x-scroll contain'>
-        <ul className='flex flex-col md:flex-row md:whitespace-nowrap'>
+      <div className='overflow-x-scroll hide-scroll-bar snap-x snap-mandatory contain'>
+        <ul className='flex flex-col md:flex-row md:flex-nowrap'>
           {portfolioData.portfolioItems.map((item, index) => (
-            <li key={index} className='md:min-w-[33.333%]'>
+            <li key={index} className='md:min-w-[30%] snap-start'>
               <PortfolioItem
                 image={item.image}
                 filePath={item.filePath}
