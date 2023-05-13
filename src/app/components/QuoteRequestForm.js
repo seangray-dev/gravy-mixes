@@ -1,5 +1,8 @@
 'use client';
 
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -28,8 +31,32 @@ const QuoteRequestForm = () => {
     actions.setSubmitting(false);
   };
 
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        transition: { duration: 1 },
+      });
+    } else {
+      controls.start({
+        opacity: 0,
+        transition: { duration: 1 },
+      });
+    }
+  }, [controls, inView]);
+
   return (
-    <div id='quote' className='bg-black text-white py-10'>
+    <motion.div
+      id='quote'
+      className='bg-black text-white py-10'
+      ref={ref}
+      animate={controls}
+      initial={{ opacity: 0 }}>
       <div className='max-w-[320px] md:max-w-[500px] mx-auto'>
         <h3 className='uppercase font-bold text-[2rem] text-center md:text-4xl tracking-wider mb-6'>
           Request a Quote
@@ -249,7 +276,7 @@ const QuoteRequestForm = () => {
           )}
         </Formik>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

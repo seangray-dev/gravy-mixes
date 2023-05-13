@@ -1,11 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import PortfolioItem from './PortfolioItem';
 import portfolioData from '../../../data/portfolioItems.json';
 
 const Portfolio = () => {
   const [currentPlaying, setCurrentPlaying] = useState(null);
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
 
   const playTrack = (filePath) => {
     if (currentPlaying === filePath) {
@@ -15,9 +23,34 @@ const Portfolio = () => {
     }
   };
 
+  const variants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.5 } },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        x: 0,
+        transition: { duration: 1 },
+      });
+    } else {
+      controls.start({
+        opacity: 0,
+        x: 100,
+        transition: { duration: 1 },
+      });
+    }
+  }, [controls, inView]);
+
   return (
-    <section id='listen' className='bg-black'>
-      <div className='overflow-x-scroll hide-scroll-bar snap-x snap-mandatory contain'>
+    <section id='listen' className='bg-black' ref={ref}>
+      <motion.div
+        className='overflow-x-scroll hide-scroll-bar snap-x snap-mandatory contain'
+        animate={controls}
+        initial='hidden'
+        variants={variants}>
         <ul className='flex flex-col md:flex-row md:flex-nowrap'>
           {portfolioData.portfolioItems.map((item, index) => (
             <li key={index} className='md:min-w-[30%] snap-start'>
@@ -32,7 +65,7 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 };

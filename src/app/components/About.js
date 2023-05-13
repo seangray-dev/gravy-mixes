@@ -1,8 +1,47 @@
+'use client';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 const About = () => {
+  const controlsText = useAnimation();
+  const controlsImg = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controlsText.start({
+        opacity: 1,
+        x: 0,
+        transition: { duration: 1 },
+      });
+      controlsImg.start({
+        opacity: 1,
+        transition: { duration: 1 },
+      });
+    } else {
+      controlsText.start({
+        opacity: 0,
+        x: -50,
+        transition: { duration: 1 },
+      });
+      controlsImg.start({
+        opacity: 0,
+        transition: { duration: 1 },
+      });
+    }
+  }, [controlsText, controlsImg, inView]);
+
   return (
-    <section id='about' className='bg-black'>
+    <section id='about' className='bg-black' ref={ref}>
       <div className='flex flex-col md:grid md:grid-cols-[60%,_40%] lg:grid-cols-[40%,_60%] contain'>
-        <div className='bg-white py-20 px-8 md:grid justify-center items-center'>
+        <motion.div
+          className='bg-white py-20 px-8 md:grid justify-center items-center'
+          animate={controlsText}
+          initial={{ opacity: 0, x: -50 }}>
           <div className='grid gap-4 md:max-w-[387px]'>
             <h2 className='uppercase font-bold text-[2rem] md:text-4xl tracking-wider'>
               About
@@ -25,14 +64,17 @@ const About = () => {
               <li>• Pop</li>
             </ul>
           </div>
-        </div>
-        <div className='w-100 bg-black'>
+        </motion.div>
+        <motion.div
+          className='w-100 bg-black'
+          animate={controlsImg}
+          initial={{ opacity: 0 }}>
           <img
             className='object-cover h-full'
             src='/assets/images/branding/about-image.jpeg'
             alt=''
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
