@@ -38,7 +38,7 @@ const Clients = () => {
   }, [controls, inView]);
 
   return (
-    <section className='bg-black' ref={ref}>
+    <section className='bg-black overflow-x-hidden' ref={ref}>
       <div className='flex flex-col-reverse md:grid md:grid-cols-[40%,_60%] lg:grid-cols-[60%,_40%] contain'>
         <motion.div
           className='bg-black'
