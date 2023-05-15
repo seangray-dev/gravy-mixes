@@ -45,7 +45,7 @@ const Portfolio = () => {
   }, [controls, inView]);
 
   return (
-    <section id='listen' className='bg-black' ref={ref}>
+    <section id='listen' className='bg-black overflow-hidden' ref={ref}>
       <motion.div
         className='overflow-x-scroll hide-scroll-bar snap-x snap-mandatory contain'
         animate={controls}
