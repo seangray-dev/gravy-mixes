@@ -12,7 +12,7 @@ import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
   email: Yup.string().email('Invalid email address').required('Required'),
-  numberOfSongs: Yup.string().required('Required'),
+  numberOfSongs: Yup.number().required('Required'),
   servicesNeeded: Yup.array().required('Required'),
   budget: Yup.string().required('Required'),
 });
