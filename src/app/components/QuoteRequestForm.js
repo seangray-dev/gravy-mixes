@@ -167,9 +167,9 @@ const QuoteRequestForm = () => {
                   name='budget'
                   className='w-full bg-transparent outline-none py-2 px-2 border-b-2 border-white/60 transition-all text-white/50 relative'>
                   <option value=''>Your Budget - Per Song</option>
-                  <option value='$250-$350'>$250-$350</option>
-                  <option value='$350-$500'>$350-$500</option>
-                  <option value='$500+'>$500+</option>
+                  <option value={250}>$250-$350</option>
+                  <option value={350}>$350-$500</option>
+                  <option value={500}>$500+</option>
                 </Field>
                 <ErrorMessage name='budget'>
                   {(msg) => (
