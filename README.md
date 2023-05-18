@@ -1,4 +1,4 @@
-# Frontend Mentor - Entertainment web app solution
+# Gravy Mixes - Mixing Engineer Portfolio
 
 This is my personal mixing engineer portfolio website to interact with mixing clients.
 
