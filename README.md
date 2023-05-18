@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Entertainment web app solution
 
-## Getting Started
+This is my personal mixing engineer portfolio website to interact with mixing clients.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [Overview](#overview)
+- [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [Built with](#built-with)
+- [Continued Devleopment](#continued-devleopment)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Users should be able to:
 
-## Learn More
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate between different components of site
+- Submit a quote request form
 
-To learn more about Next.js, take a look at the following resources:
+### Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![1](<./public/assets/images/screenshots/www.gravymixes.com_%20(1).png>)
+![2](<./public/assets/images/screenshots/www.gravymixes.com_%20(2).png>)
+![3](<./public/assets/images/screenshots/www.gravymixes.com_%20(3).png>)
+![4](<./public/assets/images/screenshots/www.gravymixes.com_%20(4).png>)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Links
 
-## Deploy on Vercel
+- [Live Site URL](https://www.gravymixes.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Built with
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [TailWindCSS](https://tailwindcss.com/) - CSS Framework
+
+## Continued Development
+
+- Remove `NEXT_PUBLIC` variables from being used, so they are not accessible by the browser.
+- Continue working on layout issues for a better UX.
+- Add additional pages that will better support my mixing clients such as a 'Clien Resources' page.
+
+## Author
+
+- Website - [seangraydev.com](https://www.seangraydev.com)
+- Twitter - [@seangray_dev](https://www.twitter.com/seangray_dev)
